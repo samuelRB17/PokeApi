@@ -14,7 +14,7 @@ function GenerarLista(arraypokemones){
 }
 
 function buscadorfuncion(asa){
-    if(asa.length >=3){
+    if(asa.length >=2) {
         const filtrados = [];
         for (let i = 0; i < pokemones.length; i++) {
             const nombre = pokemones[i].name.toLowerCase();
@@ -35,6 +35,8 @@ function buscadorfuncion(asa){
 
 
 function Home(){
+     var root = document.getElementById("root");
+    root.innerHTML = ""; // limpiar antes de pintar
      // buscador 
       
     const buscador = document.createElement("input");
@@ -65,9 +67,10 @@ function Home(){
     }
 //listas
     const listaHTML = GenerarLista(pokemones);
-    var contenedorLista = document.createElement("div");
+    const contenedorLista = document.createElement("div");
     contenedorLista.classList.add("c-lista");
     contenedorLista.innerHTML = listaHTML;
+    contenedorLista.id = "la-lista";
 
     //agregar
     document.getElementById("root").appendChild(buscador);
