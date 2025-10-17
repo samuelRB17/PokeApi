@@ -36,9 +36,6 @@ function toggleFavorito(paramid, paramname) {
 }
 
 
-
-
-
 async function Detalle (h){
     var root = document.getElementById("root");
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${h}`);

@@ -1,3 +1,146 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
 body {
-    background-color: rgb(53, 123, 216);
+  background: linear-gradient(180deg, #f5f5f5 0%, #dfe9f3 100%);
+  color: #222;
+  min-height: 100vh;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #ff1c1c;
+  padding: 12px;
+}
+
+nav button {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+nav button:hover {
+  background: #ffe14d;
+  transform: scale(1.05);
+}
+
+/* CONTENEDOR PRINCIPAL */
+#root {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+/* LISTAS DE POKEMON */
+.c-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.c-lista-pokemon {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.c-lista-pokemon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.c-lista-pokemon img {
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* DETALLE */
+.c-detalle {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  margin: 40px auto;
+}
+
+.c-detalle img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.c-detalle p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* BUSCADOR */
+.c-buscador {
+  width: 80%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin: 10px auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: block;
+}
+
+/* CAPTURADOS */
+.c-unpoke {
+  width: 80px;
+  height: 90px;
+  background: #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.c-mios-pokemon {
+  background-color: #a8ff98;
+}
+
+.c-un_aleatorio {
+  background-color: #ffeaa7;
+}
+
+button {
+  border: none;
+  background-color: #8c00ff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #ffd633;
+}
+
+/* CONTADOR */
+#contador {
+  font-weight: bold;
+  margin-top: 10px;
 }
